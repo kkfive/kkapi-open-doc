@@ -4,7 +4,7 @@
   "description": "kkapi及相关项目说明文档",
   "license": "MIT",
   "scripts": {
-    "docs:build": "vuepress build .",
+    "build": "vuepress build .",
     "docs:clean-dev": "vuepress dev . --clean-cache",
     "docs:dev": "vuepress dev ."
   },
