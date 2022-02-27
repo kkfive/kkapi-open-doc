@@ -23,6 +23,7 @@ export default defineHopeConfig({
       description: 'kkapi不完全手册'
     }
   },
-
+  bundler: '@vuepress/bundler-webpack',
+  bundlerConfig: {},
   themeConfig
 })
