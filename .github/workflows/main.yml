@@ -40,6 +40,7 @@ jobs:
 
       - name: 5. 开始构建
         run: |
+          export TZ='Asia/Shanghai'
           yarn run build
 
       - name: 6. 推送到vercel分支
