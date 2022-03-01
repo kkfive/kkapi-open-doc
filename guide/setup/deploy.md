@@ -49,6 +49,7 @@ title: 部署项目
 7. 初始化账户
 
    初始化账户在浏览器访问：`你的域名+/api/user/init?userName=xiaokang`即可初始化一个账户为`xiaokang`，密码为`123456`的账户。
+   如果不指定用户名则创建一个账户为`admin`，密码为`123456`的账户。
 
    例如:
 
@@ -114,3 +115,8 @@ title: 部署项目
 撰写中
 
 :::
+
+## 密码丢失
+
+如果密码不幸丢失了，那么手动链接数据库将其`password`字段改为`$2a$10$TVk79hQVVpmfu2BOupaIl.lw80Wlwvnpwl0oOjjLH180fi16F9p0K`即可重置密码为`123456`
+![](https://file.acs.pw/2022/03/01/7d86163e1fa6d.png)
