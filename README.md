@@ -37,5 +37,10 @@ features:
     details: Speak模块用于随手发布说说的模块
     link: /posts/ispeak/
 
+  - title: openApi模块
+    icon: api
+    details: 适用于大众的公共api
+    link: https://www.apifox.cn/apidoc/shared-d7ab8adf-2239-4b51-b9fa-c26592aa4ac4/api-12839738
+
 copyright: false
 ---
