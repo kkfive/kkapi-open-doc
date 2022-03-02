@@ -10,16 +10,17 @@ title: 部署项目
 
 进入[https://github.com/kkfive/kkapi-open](https://github.com/kkfive/kkapi-open)项目，点击右上角的 fork。
 接下来此项目将会同步到你的仓库中。
+并在以下部署姿势中任选其一选择部署即可。
 
-## Vercel 部署
+## 第一种部署姿势：Vercel 部署
 
-1. 注册Vercel账号，推荐使用GitHub账户注册。
+1. 注册 Vercel 账号，推荐使用 GitHub 账户注册。
 
-2. 进入[Vercel](https://vercel.com/new)，选择导入并找到刚刚fork的项目。
+2. 进入[Vercel](https://vercel.com/new)，选择导入并找到刚刚 fork 的项目。
 
    ![](https://file.acs.pw/picGo/2022/02/27/20220227090529.png)
 
-3. 点击导入后在url的末尾添加`/tree/vercel`表示不是vercel分支
+3. 点击导入后在 url 的末尾添加`/tree/vercel`表示不是 vercel 分支
 
    ![image-20220227090807694](https://file.acs.pw/picGo/2022/02/27/20220227090807.png)
 
@@ -33,29 +34,28 @@ title: 部署项目
 
 4. 添加环境变量进行部署
 
-   环境变量可能随项目的迭代而增加必填的环境变量，具体请参考[环境变量](/reference/setting/environment.html)
+   环境变量可能随项目的迭代而增加必填的环境变量，具体请参考[环境变量](/reference/kkapi/environment.html)
 
-![image-20220227091033443](https://file.acs.pw/picGo/2022/02/27/20220227091033.png)5. 进入vercel设置，调整production为vercel分支
+![image-20220227091033443](https://file.acs.pw/picGo/2022/02/27/20220227091033.png)5. 进入 vercel 设置，调整 production 为 vercel 分支
 
-​	![image-20220227094416620](https://file.acs.pw/picGo/2022/02/27/20220227094416.png)
+​ ![image-20220227094416620](https://file.acs.pw/picGo/2022/02/27/20220227094416.png)
 
 6. 查看部署
 
    ![](https://file.acs.pw/picGo/2022/02/27/20220227094537.png)
 
-   如果你部署的环境不是Production，那么点击旁边的`Promote to Production`将其发布到Production即可。
+   如果你部署的环境不是 Production，那么点击旁边的`Promote to Production`将其发布到 Production 即可。
 
 7. 初始化账户
 
    初始化账户在浏览器访问：`你的域名+/api/user/init?userName=xiaokang`即可初始化一个账户为`xiaokang`，密码为`123456`的账户。
+   如果不指定用户名则创建一个账户为`admin`，密码为`123456`的账户。
 
    例如:
 
    `https://kkapi-open.vercel.app/api/user/init?userName=xiaokang`
 
-
-
-## 服务器部署
+## 第二种部署姿势：服务器部署
 
 1. 克隆源代码
 
@@ -67,7 +67,7 @@ title: 部署项目
 
    如果没有`yarn`则先允许`npm i yarn -g`进行安装
 
-3. 安装pm2
+3. 安装 pm2
 
    `npm i pm2 -g`
 
@@ -88,7 +88,7 @@ title: 部署项目
    SECRETKEY=xxxxxxxxxxxxxxx
    ```
 
-   其中PORT表示启动的端口
+   其中 PORT 表示启动的端口
 
 6. 启动项目
 
@@ -104,13 +104,11 @@ title: 部署项目
 
    ```bash
    git pull
-   yarn build 
+   yarn build
    pm2 restart pm2.json
    ```
 
-
-
-## docker部署
+## 第三种部署姿势：docker 部署
 
 :::warning 提示
 
@@ -118,3 +116,7 @@ title: 部署项目
 
 :::
 
+## 密码丢失
+
+如果密码不幸丢失了，那么手动链接数据库将其`password`字段改为`$2a$10$TVk79hQVVpmfu2BOupaIl.lw80Wlwvnpwl0oOjjLH180fi16F9p0K`即可重置密码为`123456`
+![](https://file.acs.pw/2022/03/01/7d86163e1fa6d.png)
