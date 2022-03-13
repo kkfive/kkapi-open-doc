@@ -38,7 +38,7 @@ title: 部署项目
 
 ![image-20220227091033443](https://file.acs.pw/picGo/2022/02/27/20220227091033.png)5. 进入 vercel 设置，调整 production 为 vercel 分支
 
-​ ![image-20220227094416620](https://file.acs.pw/picGo/2022/02/27/20220227094416.png)
+ ![image-20220227094416620](https://file.acs.pw/picGo/2022/02/27/20220227094416.png)
 
 6. 查看部署
 
@@ -120,3 +120,11 @@ title: 部署项目
 
 如果密码不幸丢失了，那么手动链接数据库将其`password`字段改为`$2a$10$TVk79hQVVpmfu2BOupaIl.lw80Wlwvnpwl0oOjjLH180fi16F9p0K`即可重置密码为`123456`
 ![](https://file.acs.pw/2022/03/01/7d86163e1fa6d.png)
+
+
+
+## GitHub 认证
+
+此功能2022-03-13后更新，新增环境变量`GITHUB_CLIENT_SECRET`和`GITHUB_CLIENT_ID`。
+
+获取方式参考：[GitHub相关操作](/guide/setup/github.html)

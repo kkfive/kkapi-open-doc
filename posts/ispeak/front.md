@@ -101,9 +101,9 @@ title: 快速开始
 </script>
 ```
 
-ispeak 配置项 scheam 参考：https://github.com/kkfive/ISpeak/blob/master/src/types/parameter.ts
+ispeak 配置项 scheam 参考：https://github.com/kkfive/ISpeak/blob/master/src/types/parameter.ts或者[/posts/ispeak/init-params.html](/posts/ispeak/init-params.html)优先以前者为准
 
-:::warning
+::: warning
 
 关于评论一直没有找到合适的通用解决方案，因此关于评论配置名称后期可能会做出调整。因此为了不影响使用，请指定版本号引入相关静态资源
 
@@ -123,7 +123,7 @@ ispeak 配置项 scheam 参考：https://github.com/kkfive/ISpeak/blob/master/sr
 
 - url:`/ispeak/tag/list?userId=用户id`
 
-​ 例如：[链接](https://kkapi-open.vercel.app/api/ispeak/tag/list?userId=6214e53ffffe384c0230910d)
+ 例如：[链接](https://kkapi-open.vercel.app/api/ispeak/tag/list?userId=6214e53ffffe384c0230910d)
 
 - 返回值
 
@@ -244,3 +244,25 @@ export class IspeakTag {
   description: string
 }
 ```
+
+
+
+
+
+## 开启GitHub认证
+
+Ispeak发送的speak包含登录可见、公开可见和仅作者可见。因此使用GitHub作为一键认证，实现此功能。
+
+初始化参数时填入一下两个字段即可。
+
+```typescript
+export interface params {
+    // speak页面路径
+    speakPage?: string // 例如 ‘/speak’
+    githubClientId?: string // 通过创建GitHub app获取
+}
+```
+
+> 此功能需要kkapi填入相关环境变量：GITHUB_CLIENT_ID和GITHUB_CLIENT_SECRET。
+>
+> 博主id需要在kkadmin后台手动填入。

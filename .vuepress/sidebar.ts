@@ -5,7 +5,7 @@ export default defineSidebarConfig({
     {
       text: '快速开始',
       icon: 'creative',
-      children: ['setup/db', 'setup/deploy']
+      children: ['setup/db', 'setup/deploy', 'setup/github']
     },
     {
       text: '管理后台',
@@ -29,7 +29,12 @@ export default defineSidebarConfig({
     {
       text: 'ispeak模块',
       icon: 'book',
-      children: ['ispeak/', 'ispeak/front/', 'ispeak/send-mode/']
+      children: [
+        'ispeak/',
+        'ispeak/front/',
+        'ispeak/send-mode/',
+        'ispeak/init-params/'
+      ]
     }
   ]
 })
