@@ -6,8 +6,6 @@ category:
 title: 初始化参数
 ---
 
-
-
 ```typescript
 // 初始化函数参数定义
 export interface initOptions {
@@ -26,16 +24,20 @@ export interface initOptions {
   // speak页面路径
   speakPage?: string
   githubClientId?: string
-  // 第一个评论的类型
-  initCommentName?: string
-  // 评论选项
-  initCommentOptions?: any
+  // 是否隐藏评论按钮
+  hideComment?: boolean
+  // 初始化评论的回调函数
+  comment?: (speak: SpeakType) => void
+  // 创建div标签时的类名
+  commentClass?: string
 
-  // 全局对象类型的评论
+  // 第一个评论的类型 4.4.0之后废弃
+  initCommentName?: string
+  // 评论选项 4.4.0之后废弃
+  initCommentOptions?: any
+  // 全局对象类型的评论 4.4.0之后废弃
   globalCommentName?: string
-  // 评论选项
+  // 评论选项 4.4.0之后废弃
   globalCommentOptions?: any
 }
-
 ```
-

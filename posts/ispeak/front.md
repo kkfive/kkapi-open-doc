@@ -46,7 +46,7 @@ title: 快速开始
 
 > ipseak 使用 marked 依赖和 highlight 依赖，为了减少打包体积，并没有将该依赖打包，因此需要使用 cdn 进行外部引入。
 
-参考如下
+参考如下（以[Artalk](https://artalk.js.org/)评论为例）
 
 ```html
 <div id="tip" style="text-align:center;">ipseak加载中</div>
@@ -57,21 +57,16 @@ title: 快速开始
 />
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/ispeak@4.2.0/style.css"
+  href="https://cdn.jsdelivr.net/npm/ispeak@4.4.0/style.css"
 />
 
-<style>
-  #article-container .D-avatar {
-    margin: 0 10px 0 0;
-  }
-  .D-footer {
-    display: none;
-  }
-</style>
 <script src="https://cdn.staticfile.org/highlight.js/10.6.0/highlight.min.js"></script>
 <script src="https://cdn.staticfile.org/marked/2.0.0/marked.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/discuss/dist/Discuss.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/ispeak@4.2.0/ispeak.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ispeak@4.4.0/ispeak.umd.js"></script>
+<!-- CSS -->
+<link href="https://unpkg.com/artalk@2.3.4/dist/Artalk.css" rel="stylesheet" />
+<!-- JS -->
+<script src="https://unpkg.com/artalk@2.3.4/dist/Artalk.js"></script>
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')
@@ -85,10 +80,18 @@ title: 快速开始
         api: 'https://kkapi-dev.vercel.app/',
         author: '61fe93508fd621d39a155725',
         pageSize: 10,
-        loading_img: 'https://7.dusays.com/2021/03/04/d2d5e983e2961.gif',
-        initCommentName: 'Discuss',
-        initCommentOptions: {
-          serverURLs: 'https://kkdiscuss.vercel.app/'
+        loading_img: 'https://bu.dusays.com/2021/03/04/d2d5e983e2961.gif',
+        comment: function (speak) {
+          // 4.4.0 之后在此回调函数中初始化评论
+          const { _id, title, content } = speak
+          const contentSub = content.substring(0, 30)
+          new Artalk({
+            el: '.ispeak-comment', // 默认情况下 ipseak 生成class为 ispeak-comment 的div
+            pageKey: '/speak/info.html/#/' + _id, // 手动传入当前speak的唯一id
+            pageTitle: title || contentSub, // 手动传入当前speak的标题(由于content可能过长，因此截取前30个字符)
+            server: 'https://api.antmoe.com/artalk/',
+            site: 'speak' // 你的站点名
+          })
         }
       })
       .then(function () {
@@ -123,7 +126,7 @@ ispeak 配置项 scheam 参考：https://github.com/kkfive/ISpeak/blob/master/sr
 
 - url:`/ispeak/tag/list?userId=用户id`
 
- 例如：[链接](https://kkapi-open.vercel.app/api/ispeak/tag/list?userId=6214e53ffffe384c0230910d)
+例如：[链接](https://kkapi-open.vercel.app/api/ispeak/tag/list?userId=6214e53ffffe384c0230910d)
 
 - 返回值
 
@@ -245,24 +248,20 @@ export class IspeakTag {
 }
 ```
 
+## 开启 GitHub 认证
 
-
-
-
-## 开启GitHub认证
-
-Ispeak发送的speak包含登录可见、公开可见和仅作者可见。因此使用GitHub作为一键认证，实现此功能。
+Ispeak 发送的 speak 包含登录可见、公开可见和仅作者可见。因此使用 GitHub 作为一键认证，实现此功能。
 
 初始化参数时填入一下两个字段即可。
 
 ```typescript
 export interface params {
-    // speak页面路径
-    speakPage?: string // 例如 ‘/speak’
-    githubClientId?: string // 通过创建GitHub app获取
+  // speak页面路径
+  speakPage?: string // 例如 ‘/speak’
+  githubClientId?: string // 通过创建GitHub app获取
 }
 ```
 
-> 此功能需要kkapi填入相关环境变量：GITHUB_CLIENT_ID和GITHUB_CLIENT_SECRET。
+> 此功能需要 kkapi 填入相关环境变量：GITHUB_CLIENT_ID 和 GITHUB_CLIENT_SECRET。
 >
-> 博主id需要在kkadmin后台手动填入。
+> 博主 id 需要在 kkadmin 后台手动填入。
