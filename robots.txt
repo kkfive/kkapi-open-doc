@@ -1,5 +1,0 @@
-
-User-agent:*
-Disallow:
-
-Sitemap: https://kkapi-doc.kkfive.top/sitemap.xml

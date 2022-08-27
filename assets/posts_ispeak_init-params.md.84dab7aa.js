@@ -1,0 +1,67 @@
+import{_ as s,c as n,o as a,d as p}from"./app.1f7f19a8.js";const E=JSON.parse('{"title":"ISpeak \u521D\u59CB\u5316\u53C2\u6570","description":"","frontmatter":{},"headers":[],"relativePath":"posts/ispeak/init-params.md","lastUpdated":1661613801000}'),l={name:"posts/ispeak/init-params.md"},o=p(`<h1 id="ispeak-\u521D\u59CB\u5316\u53C2\u6570" tabindex="-1">ISpeak \u521D\u59CB\u5316\u53C2\u6570 <a class="header-anchor" href="#ispeak-\u521D\u59CB\u5316\u53C2\u6570" aria-hidden="true">#</a></h1><div class="language-typescript"><button class="copy"></button><span class="lang">typescript</span><pre class="vp-code-dark"><code><span class="line"><span style="color:#8B949E;">// \u521D\u59CB\u5316\u51FD\u6570\u53C2\u6570\u5B9A\u4E49</span></span>
+<span class="line"><span style="color:#FF7B72;">export</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">interface</span><span style="color:#C9D1D9;"> </span><span style="color:#FFA657;">initOptions</span><span style="color:#C9D1D9;"> {</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// \u7ED1\u5B9A\u7684\u6807\u7B7E</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">el</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">string</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// api\u5730\u5740</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">api</span><span style="color:#FF7B72;">:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">string</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// ispeak\u4F5C\u8005</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">author</span><span style="color:#FF7B72;">:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">string</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// \u6BCF\u9875speak\u663E\u793A\u7684\u6761\u6570</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">pageSize</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">number</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// \u61D2\u52A0\u8F7D\u5931\u8D25\u65F6\u663E\u793A\u7684\u56FE\u50CF</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">fail_img</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">string</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// loading\u7684\u56FE\u7247</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">loading_img</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">string</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// speak\u9875\u9762\u8DEF\u5F84</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">speakPage</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">string</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">githubClientId</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">string</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// \u662F\u5426\u9690\u85CF\u8BC4\u8BBA\u6309\u94AE</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">hideComment</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">boolean</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// \u521D\u59CB\u5316\u8BC4\u8BBA\u7684\u56DE\u8C03\u51FD\u6570</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#D2A8FF;">comment</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> (</span><span style="color:#FFA657;">speak</span><span style="color:#FF7B72;">:</span><span style="color:#C9D1D9;"> </span><span style="color:#FFA657;">SpeakType</span><span style="color:#C9D1D9;">) </span><span style="color:#FF7B72;">=&gt;</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">void</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// \u521B\u5EFAdiv\u6807\u7B7E\u65F6\u7684\u7C7B\u540D</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">commentClass</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">string</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// \u7B2C\u4E00\u4E2A\u8BC4\u8BBA\u7684\u7C7B\u578B 4.4.0\u4E4B\u540E\u5E9F\u5F03</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">initCommentName</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">string</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// \u8BC4\u8BBA\u9009\u9879 4.4.0\u4E4B\u540E\u5E9F\u5F03</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">initCommentOptions</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">any</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// \u5168\u5C40\u5BF9\u8C61\u7C7B\u578B\u7684\u8BC4\u8BBA 4.4.0\u4E4B\u540E\u5E9F\u5F03</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">globalCommentName</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">string</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#8B949E;">// \u8BC4\u8BBA\u9009\u9879 4.4.0\u4E4B\u540E\u5E9F\u5F03</span></span>
+<span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FFA657;">globalCommentOptions</span><span style="color:#FF7B72;">?:</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">any</span></span>
+<span class="line"><span style="color:#C9D1D9;">}</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#6E7781;">// \u521D\u59CB\u5316\u51FD\u6570\u53C2\u6570\u5B9A\u4E49</span></span>
+<span class="line"><span style="color:#CF222E;">export</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">interface</span><span style="color:#24292F;"> </span><span style="color:#953800;">initOptions</span><span style="color:#24292F;"> {</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// \u7ED1\u5B9A\u7684\u6807\u7B7E</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">el</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">string</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// api\u5730\u5740</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">api</span><span style="color:#CF222E;">:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">string</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// ispeak\u4F5C\u8005</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">author</span><span style="color:#CF222E;">:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">string</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// \u6BCF\u9875speak\u663E\u793A\u7684\u6761\u6570</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">pageSize</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">number</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// \u61D2\u52A0\u8F7D\u5931\u8D25\u65F6\u663E\u793A\u7684\u56FE\u50CF</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">fail_img</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">string</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// loading\u7684\u56FE\u7247</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">loading_img</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">string</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// speak\u9875\u9762\u8DEF\u5F84</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">speakPage</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">string</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">githubClientId</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">string</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// \u662F\u5426\u9690\u85CF\u8BC4\u8BBA\u6309\u94AE</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">hideComment</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">boolean</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// \u521D\u59CB\u5316\u8BC4\u8BBA\u7684\u56DE\u8C03\u51FD\u6570</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#8250DF;">comment</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> (</span><span style="color:#953800;">speak</span><span style="color:#CF222E;">:</span><span style="color:#24292F;"> </span><span style="color:#953800;">SpeakType</span><span style="color:#24292F;">) </span><span style="color:#CF222E;">=&gt;</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">void</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// \u521B\u5EFAdiv\u6807\u7B7E\u65F6\u7684\u7C7B\u540D</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">commentClass</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">string</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// \u7B2C\u4E00\u4E2A\u8BC4\u8BBA\u7684\u7C7B\u578B 4.4.0\u4E4B\u540E\u5E9F\u5F03</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">initCommentName</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">string</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// \u8BC4\u8BBA\u9009\u9879 4.4.0\u4E4B\u540E\u5E9F\u5F03</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">initCommentOptions</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">any</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// \u5168\u5C40\u5BF9\u8C61\u7C7B\u578B\u7684\u8BC4\u8BBA 4.4.0\u4E4B\u540E\u5E9F\u5F03</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">globalCommentName</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">string</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#6E7781;">// \u8BC4\u8BBA\u9009\u9879 4.4.0\u4E4B\u540E\u5E9F\u5F03</span></span>
+<span class="line"><span style="color:#24292F;">  </span><span style="color:#953800;">globalCommentOptions</span><span style="color:#CF222E;">?:</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">any</span></span>
+<span class="line"><span style="color:#24292F;">}</span></span>
+<span class="line"></span></code></pre></div>`,2),e=[o];function c(t,r,y,F,i,D){return a(),n("div",null,e)}const m=s(l,[["render",c]]);export{E as __pageData,m as default};

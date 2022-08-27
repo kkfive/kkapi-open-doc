@@ -1,28 +1,10 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>发送方式参考 | KK Api</title>
-    <meta name="description" content="一个基于NodeJS开发的API">
-    <link rel="stylesheet" href="/assets/style.460566ef.css">
-    <link rel="modulepreload" href="/assets/app.1f7f19a8.js">
-    <link rel="modulepreload" href="/assets/posts_ispeak_send-mode.md.126957b1.lean.js">
-    
-    <link rel="icon" href="/favicon.svg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
-  <link href="https://npm.elemecdn.com/lightgallery@2.3.0/css/lightgallery.css" rel="stylesheet">
-  <script src="https://npm.elemecdn.com/lightgallery@2.3.0/lightgallery.min.js"></script>
-  <script id="check-dark-light">(()=>{const e=localStorage.getItem("vitepress-theme-appearance"),a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
-  </head>
-  <body>
-    <div id="app"><div class="Layout" data-v-73df1f0a><!--[--><!--]--><!--[--><span tabindex="-1" data-v-f67f22f0></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-f67f22f0> Skip to content </a><!--]--><!----><header class="VPNav" data-v-73df1f0a data-v-0cfc0bde><div class="VPNavBar has-sidebar" data-v-0cfc0bde data-v-4927d799><div class="container" data-v-4927d799><div class="VPNavBarTitle has-sidebar" data-v-4927d799 data-v-bc6a97be><a class="title" href="/" data-v-bc6a97be><!--[--><!--]--><!----><!--[-->KK Api<!--]--><!--[--><!--]--></a></div><div class="content" data-v-4927d799><!--[--><!--]--><!----><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-4927d799 data-v-2f23ea1e><span id="main-nav-aria-label" class="visually-hidden" data-v-2f23ea1e>Main Navigation</span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/guide/" data-v-2f23ea1e data-v-111038e6 data-v-67d60652><!--[-->首页<!--]--><!----></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/reference/" data-v-2f23ea1e data-v-111038e6 data-v-67d60652><!--[-->参考项<!--]--><!----></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/case/" data-v-2f23ea1e data-v-111038e6 data-v-67d60652><!--[-->相关案例<!--]--><!----></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="https://www.apifox.cn/apidoc/shared-d7ab8adf-2239-4b51-b9fa-c26592aa4ac4" target="_blank" rel="noreferrer" data-v-2f23ea1e data-v-111038e6 data-v-67d60652><!--[-->API参考<!--]--><!----></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-4927d799 data-v-e1beefe3><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" aria-label="toggle dark mode" data-v-e1beefe3 data-v-b18c494c data-v-98df4062><span class="check" data-v-98df4062><span class="icon" data-v-98df4062><!--[--><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="sun" data-v-b18c494c><path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"></path><path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"></path><path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"></path><path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"></path><path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"></path><path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"></path><path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path><path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"></path><path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="moon" data-v-b18c494c><path d="M12.1,22c-0.3,0-0.6,0-0.9,0c-5.5-0.5-9.5-5.4-9-10.9c0.4-4.8,4.2-8.6,9-9c0.4,0,0.8,0.2,1,0.5c0.2,0.3,0.2,0.8-0.1,1.1c-2,2.7-1.4,6.4,1.3,8.4c2.1,1.6,5,1.6,7.1,0c0.3-0.2,0.7-0.3,1.1-0.1c0.3,0.2,0.5,0.6,0.5,1c-0.2,2.7-1.5,5.1-3.6,6.8C16.6,21.2,14.4,22,12.1,22zM9.3,4.4c-2.9,1-5,3.6-5.2,6.8c-0.4,4.4,2.8,8.3,7.2,8.7c2.1,0.2,4.2-0.4,5.8-1.8c1.1-0.9,1.9-2.1,2.4-3.4c-2.5,0.9-5.3,0.5-7.5-1.1C9.2,11.4,8.1,7.7,9.3,4.4z"></path></svg><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-4927d799 data-v-50503c86 data-v-a280df66><!--[--><a class="VPSocialLink" href="https://github.com/kkfive/kkapi-open" target="_blank" rel="noopener" data-v-a280df66 data-v-96bd3555><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-4927d799 data-v-507d7ba3 data-v-45e70e3c><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-45e70e3c><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="icon" data-v-45e70e3c><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="5" cy="12" r="2"></circle></svg></button><div class="menu" data-v-45e70e3c><div class="VPMenu" data-v-45e70e3c data-v-06c9c62b><!----><!--[--><!--[--><!----><div class="group" data-v-507d7ba3><div class="item appearance" data-v-507d7ba3><p class="label" data-v-507d7ba3>Appearance</p><div class="appearance-action" data-v-507d7ba3><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" aria-label="toggle dark mode" data-v-507d7ba3 data-v-b18c494c data-v-98df4062><span class="check" data-v-98df4062><span class="icon" data-v-98df4062><!--[--><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="sun" data-v-b18c494c><path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"></path><path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"></path><path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"></path><path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"></path><path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"></path><path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"></path><path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path><path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"></path><path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="moon" data-v-b18c494c><path d="M12.1,22c-0.3,0-0.6,0-0.9,0c-5.5-0.5-9.5-5.4-9-10.9c0.4-4.8,4.2-8.6,9-9c0.4,0,0.8,0.2,1,0.5c0.2,0.3,0.2,0.8-0.1,1.1c-2,2.7-1.4,6.4,1.3,8.4c2.1,1.6,5,1.6,7.1,0c0.3-0.2,0.7-0.3,1.1-0.1c0.3,0.2,0.5,0.6,0.5,1c-0.2,2.7-1.5,5.1-3.6,6.8C16.6,21.2,14.4,22,12.1,22zM9.3,4.4c-2.9,1-5,3.6-5.2,6.8c-0.4,4.4,2.8,8.3,7.2,8.7c2.1,0.2,4.2-0.4,5.8-1.8c1.1-0.9,1.9-2.1,2.4-3.4c-2.5,0.9-5.3,0.5-7.5-1.1C9.2,11.4,8.1,7.7,9.3,4.4z"></path></svg><!--]--></span></span></button></div></div></div><div class="group" data-v-507d7ba3><div class="item social-links" data-v-507d7ba3><div class="VPSocialLinks social-links-list" data-v-507d7ba3 data-v-a280df66><!--[--><a class="VPSocialLink" href="https://github.com/kkfive/kkapi-open" target="_blank" rel="noopener" data-v-a280df66 data-v-96bd3555><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-4927d799 data-v-653d972e><span class="container" data-v-653d972e><span class="top" data-v-653d972e></span><span class="middle" data-v-653d972e></span><span class="bottom" data-v-653d972e></span></span></button></div></div></div><!----></header><div class="VPLocalNav" data-v-73df1f0a data-v-cc61126a><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-cc61126a><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="menu-icon" data-v-cc61126a><path d="M17,11H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,11,17,11z"></path><path d="M21,7H3C2.4,7,2,6.6,2,6s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,7,21,7z"></path><path d="M21,15H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,15,21,15z"></path><path d="M17,19H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,19,17,19z"></path></svg><span class="menu-text" data-v-cc61126a>Menu</span></button><a class="top-link" href="#" data-v-cc61126a> Return to top </a></div><aside class="VPSidebar" data-v-73df1f0a data-v-fed377e3><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-fed377e3><span class="visually-hidden" id="sidebar-aria-label" data-v-fed377e3> Sidebar Navigation </span><!--[--><div class="group" data-v-fed377e3><section class="VPSidebarGroup collapsible" data-v-fed377e3 data-v-18bfc316><div class="title" role="button" data-v-18bfc316><h2 class="title-text" data-v-18bfc316>ISpeak</h2><div class="action" data-v-18bfc316><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 24 24" class="icon minus" data-v-18bfc316><path d="M19,2H5C3.3,2,2,3.3,2,5v14c0,1.7,1.3,3,3,3h14c1.7,0,3-1.3,3-3V5C22,3.3,20.7,2,19,2zM20,19c0,0.6-0.4,1-1,1H5c-0.6,0-1-0.4-1-1V5c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1V19z"></path><path d="M16,11H8c-0.6,0-1,0.4-1,1s0.4,1,1,1h8c0.6,0,1-0.4,1-1S16.6,11,16,11z"></path></svg><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon plus" data-v-18bfc316><path d="M19,2H5C3.3,2,2,3.3,2,5v14c0,1.7,1.3,3,3,3h14c1.7,0,3-1.3,3-3V5C22,3.3,20.7,2,19,2z M20,19c0,0.6-0.4,1-1,1H5c-0.6,0-1-0.4-1-1V5c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1V19z"></path><path d="M16,11h-3V8c0-0.6-0.4-1-1-1s-1,0.4-1,1v3H8c-0.6,0-1,0.4-1,1s0.4,1,1,1h3v3c0,0.6,0.4,1,1,1s1-0.4,1-1v-3h3c0.6,0,1-0.4,1-1S16.6,11,16,11z"></path></svg></div></div><div class="items" data-v-18bfc316><!--[--><a class="VPLink link link" href="/posts/ispeak/index.html" data-v-18bfc316 data-v-02f4e18d data-v-67d60652><!--[--><span class="link-text" data-v-02f4e18d>简单介绍</span><!----><!--]--><!----></a><a class="VPLink link link" href="/posts/ispeak/front.html" data-v-18bfc316 data-v-02f4e18d data-v-67d60652><!--[--><span class="link-text" data-v-02f4e18d>快速开始</span><!----><!--]--><!----></a><a class="VPLink link link" href="/posts/ispeak/comment.html" data-v-18bfc316 data-v-02f4e18d data-v-67d60652><!--[--><span class="link-text" data-v-02f4e18d>设置评论</span><!----><!--]--><!----></a><a class="VPLink link link active" href="/posts/ispeak/send-mode.html" data-v-18bfc316 data-v-02f4e18d data-v-67d60652><!--[--><span class="link-text" data-v-02f4e18d>发送方式</span><!----><!--]--><!----></a><a class="VPLink link link" href="/posts/ispeak/init-params.html" data-v-18bfc316 data-v-02f4e18d data-v-67d60652><!--[--><span class="link-text" data-v-02f4e18d>初始化参数</span><!----><!--]--><!----></a><!--]--></div></section></div><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-73df1f0a data-v-eb1173e8><div class="VPDoc has-sidebar has-aside" data-v-eb1173e8 data-v-4cd5e8da><div class="container" data-v-4cd5e8da><div class="aside" data-v-4cd5e8da><div class="aside-curtain" data-v-4cd5e8da></div><div class="aside-container" data-v-4cd5e8da><div class="aside-content" data-v-4cd5e8da><div class="VPDocAside" data-v-4cd5e8da data-v-c38c5e5f><!--[--><!--]--><!--[--><!--]--><div class="VPDocAsideOutline has-outline" data-v-c38c5e5f data-v-a2e6955f><div class="content" data-v-a2e6955f><div class="outline-marker" data-v-a2e6955f></div><div class="outline-title" data-v-a2e6955f>On this page</div><nav aria-labelledby="doc-outline-aria-label" data-v-a2e6955f><span class="visually-hidden" id="doc-outline-aria-label" data-v-a2e6955f> Table of Contents for current page </span><ul class="root" data-v-a2e6955f><!--[--><li data-v-a2e6955f><a class="outline-link" href="#网页端发送" data-v-a2e6955f>网页端发送</a><!----></li><li data-v-a2e6955f><a class="outline-link" href="#后台发送" data-v-a2e6955f>后台发送</a><!----></li><li data-v-a2e6955f><a class="outline-link" href="#ios-快捷指令" data-v-a2e6955f>ios 快捷指令</a><!----></li><li data-v-a2e6955f><a class="outline-link" href="#ios-mac-应用-taio" data-v-a2e6955f>ios/Mac 应用 Taio</a><!----></li><li data-v-a2e6955f><a class="outline-link" href="#utools-发送" data-v-a2e6955f>Utools 发送</a><!----></li><!--]--></ul></nav></div></div><!--[--><!--]--><div class="spacer" data-v-c38c5e5f></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-4cd5e8da><div class="content-container" data-v-4cd5e8da><!--[--><!--]--><main class="main" data-v-4cd5e8da><div style="position:relative;" class="vp-doc _posts_ispeak_send-mode" data-v-4cd5e8da><div><h1 id="发送方式参考" tabindex="-1">发送方式参考 <a class="header-anchor" href="#发送方式参考" aria-hidden="true">#</a></h1><h2 id="网页端发送" tabindex="-1">网页端发送 <a class="header-anchor" href="#网页端发送" aria-hidden="true">#</a></h2><p>GitHub开源仓库：<a href="https://github.com/kkfive/speak-biubiu" target="_blank" rel="noreferrer">https://github.com/kkfive/speak-biubiu</a></p><h2 id="后台发送" tabindex="-1">后台发送 <a class="header-anchor" href="#后台发送" aria-hidden="true">#</a></h2><p>进入后台新增即可</p><p><img src="https://file.acs.pw/picGo/2022/02/27/20220227135930.png" alt="image-20220227135930033"></p><h2 id="ios-快捷指令" tabindex="-1">ios 快捷指令 <a class="header-anchor" href="#ios-快捷指令" aria-hidden="true">#</a></h2><p>快捷指令链接：<a href="https://www.icloud.com/shortcuts/5a03f4209c3e4b42bb75bbea2eaf57db" target="_blank" rel="noreferrer">https://www.icloud.com/shortcuts/5a03f4209c3e4b42bb75bbea2eaf57db</a></p><p><img src="https://file.acs.pw/picGo/2022/02/27/20220227140332.png" alt="image-20220227140332782"></p><p>在此处将你的配置信息填写即可</p><h2 id="ios-mac-应用-taio" tabindex="-1">ios/Mac 应用 Taio <a class="header-anchor" href="#ios-mac-应用-taio" aria-hidden="true">#</a></h2><p>参考动作</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#c9d1d9;">{</span></span>
+import{_ as s,c as n,o as a,d as l}from"./app.1f7f19a8.js";const F=JSON.parse('{"title":"\u53D1\u9001\u65B9\u5F0F\u53C2\u8003","description":"","frontmatter":{},"headers":[{"level":2,"title":"\u7F51\u9875\u7AEF\u53D1\u9001","slug":"\u7F51\u9875\u7AEF\u53D1\u9001","link":"#\u7F51\u9875\u7AEF\u53D1\u9001","children":[]},{"level":2,"title":"\u540E\u53F0\u53D1\u9001","slug":"\u540E\u53F0\u53D1\u9001","link":"#\u540E\u53F0\u53D1\u9001","children":[]},{"level":2,"title":"ios \u5FEB\u6377\u6307\u4EE4","slug":"ios-\u5FEB\u6377\u6307\u4EE4","link":"#ios-\u5FEB\u6377\u6307\u4EE4","children":[]},{"level":2,"title":"ios/Mac \u5E94\u7528 Taio","slug":"ios-mac-\u5E94\u7528-taio","link":"#ios-mac-\u5E94\u7528-taio","children":[]},{"level":2,"title":"Utools \u53D1\u9001","slug":"utools-\u53D1\u9001","link":"#utools-\u53D1\u9001","children":[]}],"relativePath":"posts/ispeak/send-mode.md","lastUpdated":1661613801000}'),p={name:"posts/ispeak/send-mode.md"},o=l(`<h1 id="\u53D1\u9001\u65B9\u5F0F\u53C2\u8003" tabindex="-1">\u53D1\u9001\u65B9\u5F0F\u53C2\u8003 <a class="header-anchor" href="#\u53D1\u9001\u65B9\u5F0F\u53C2\u8003" aria-hidden="true">#</a></h1><h2 id="\u7F51\u9875\u7AEF\u53D1\u9001" tabindex="-1">\u7F51\u9875\u7AEF\u53D1\u9001 <a class="header-anchor" href="#\u7F51\u9875\u7AEF\u53D1\u9001" aria-hidden="true">#</a></h2><p>GitHub\u5F00\u6E90\u4ED3\u5E93\uFF1A<a href="https://github.com/kkfive/speak-biubiu" target="_blank" rel="noreferrer">https://github.com/kkfive/speak-biubiu</a></p><h2 id="\u540E\u53F0\u53D1\u9001" tabindex="-1">\u540E\u53F0\u53D1\u9001 <a class="header-anchor" href="#\u540E\u53F0\u53D1\u9001" aria-hidden="true">#</a></h2><p>\u8FDB\u5165\u540E\u53F0\u65B0\u589E\u5373\u53EF</p><p><img src="https://file.acs.pw/picGo/2022/02/27/20220227135930.png" alt="image-20220227135930033"></p><h2 id="ios-\u5FEB\u6377\u6307\u4EE4" tabindex="-1">ios \u5FEB\u6377\u6307\u4EE4 <a class="header-anchor" href="#ios-\u5FEB\u6377\u6307\u4EE4" aria-hidden="true">#</a></h2><p>\u5FEB\u6377\u6307\u4EE4\u94FE\u63A5\uFF1A<a href="https://www.icloud.com/shortcuts/5a03f4209c3e4b42bb75bbea2eaf57db" target="_blank" rel="noreferrer">https://www.icloud.com/shortcuts/5a03f4209c3e4b42bb75bbea2eaf57db</a></p><p><img src="https://file.acs.pw/picGo/2022/02/27/20220227140332.png" alt="image-20220227140332782"></p><p>\u5728\u6B64\u5904\u5C06\u4F60\u7684\u914D\u7F6E\u4FE1\u606F\u586B\u5199\u5373\u53EF</p><h2 id="ios-mac-\u5E94\u7528-taio" tabindex="-1">ios/Mac \u5E94\u7528 Taio <a class="header-anchor" href="#ios-mac-\u5E94\u7528-taio" aria-hidden="true">#</a></h2><p>\u53C2\u8003\u52A8\u4F5C</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#c9d1d9;">{</span></span>
 <span class="line"><span style="color:#c9d1d9;">  &quot;actions&quot; : [</span></span>
 <span class="line"><span style="color:#c9d1d9;">    {</span></span>
 <span class="line"><span style="color:#c9d1d9;">      &quot;type&quot; : &quot;@flow.set-variable&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;value&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;你的token&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\u4F60\u7684token&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        },</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;name&quot; : {</span></span>
 <span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;token&quot;</span></span>
@@ -66,7 +48,7 @@
 <span class="line"><span style="color:#c9d1d9;">      &quot;type&quot; : &quot;@flow.set-variable&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;value&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;你的api地址&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\u4F60\u7684api\u5730\u5740&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        },</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;name&quot; : {</span></span>
 <span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;api&quot;</span></span>
@@ -77,7 +59,7 @@
 <span class="line"><span style="color:#c9d1d9;">      &quot;type&quot; : &quot;@flow.set-variable&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;value&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;你的用户id&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\u4F60\u7684\u7528\u6237id&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        },</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;name&quot; : {</span></span>
 <span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;userId&quot;</span></span>
@@ -91,7 +73,7 @@
 <span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        },</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;url&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;$\/ispeak\/tag\/list?userId=$&quot;,</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;$\\/ispeak\\/tag\\/list?userId=$&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">          &quot;tokens&quot; : [</span></span>
 <span class="line"><span style="color:#c9d1d9;">            {</span></span>
 <span class="line"><span style="color:#c9d1d9;">              &quot;location&quot; : 25,</span></span>
@@ -105,7 +87,7 @@
 <span class="line"><span style="color:#c9d1d9;">        },</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;method&quot; : 0,</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;headers&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;{\n  \&quot;Content-Type\&quot;: \&quot;application\/json\&quot;\n}&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;{\\n  \\&quot;Content-Type\\&quot;: \\&quot;application\\/json\\&quot;\\n}&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        }</span></span>
 <span class="line"><span style="color:#c9d1d9;">      }</span></span>
 <span class="line"><span style="color:#c9d1d9;">    },</span></span>
@@ -113,7 +95,7 @@
 <span class="line"><span style="color:#c9d1d9;">      &quot;type&quot; : &quot;@flow.javascript&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;script&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\/\/ Get input\nconst text = $actions.inputValue;\n\/\/ Resolve with output\nconst textJson = JSON.parse(text);\nconst selectData = []\nconst selectMap = {}\ntextJson.data.forEach(item=&gt;{\n  selectData.push(item.name)\n  selectMap[item.name] = item._id\n})\n$actions.setVar(\&quot;selectMap\&quot;,selectMap)\n$actions.resolve(selectData.join(\&quot;\\n\&quot;));\n\n\/\/ Exception handling:\n\/\/  $actions.reject(\&quot;Error\&quot;);\n\/\/  $actions.finish();&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\\/\\/ Get input\\nconst text = $actions.inputValue;\\n\\/\\/ Resolve with output\\nconst textJson = JSON.parse(text);\\nconst selectData = []\\nconst selectMap = {}\\ntextJson.data.forEach(item=&gt;{\\n  selectData.push(item.name)\\n  selectMap[item.name] = item._id\\n})\\n$actions.setVar(\\&quot;selectMap\\&quot;,selectMap)\\n$actions.resolve(selectData.join(\\&quot;\\\\n\\&quot;));\\n\\n\\/\\/ Exception handling:\\n\\/\\/  $actions.reject(\\&quot;Error\\&quot;);\\n\\/\\/  $actions.finish();&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        }</span></span>
 <span class="line"><span style="color:#c9d1d9;">      }</span></span>
 <span class="line"><span style="color:#c9d1d9;">    },</span></span>
@@ -157,7 +139,7 @@
 <span class="line"><span style="color:#c9d1d9;">      &quot;type&quot; : &quot;@flow.javascript&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;script&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\/\/ Get input\nconst text = $actions.inputValue;\nconst selectMap = $actions.getVar(\&quot;selectMap\&quot;)\n$actions.setVar(\&quot;tag\&quot;,selectMap[text])\n\/\/ Resolve with output\n$actions.resolve(selectMap[text]);\n\n\/\/ Exception handling:\n\/\/  $actions.reject(\&quot;Error\&quot;);\n\/\/  $actions.finish();&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\\/\\/ Get input\\nconst text = $actions.inputValue;\\nconst selectMap = $actions.getVar(\\&quot;selectMap\\&quot;)\\n$actions.setVar(\\&quot;tag\\&quot;,selectMap[text])\\n\\/\\/ Resolve with output\\n$actions.resolve(selectMap[text]);\\n\\n\\/\\/ Exception handling:\\n\\/\\/  $actions.reject(\\&quot;Error\\&quot;);\\n\\/\\/  $actions.finish();&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        }</span></span>
 <span class="line"><span style="color:#c9d1d9;">      }</span></span>
 <span class="line"><span style="color:#c9d1d9;">    },</span></span>
@@ -165,12 +147,12 @@
 <span class="line"><span style="color:#c9d1d9;">      &quot;type&quot; : &quot;@ui.menu&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;prompt&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;选择可见类型&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\u9009\u62E9\u53EF\u89C1\u7C7B\u578B&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        },</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;selectAllByDefault&quot; : false,</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;multiValue&quot; : false,</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;lines&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;公开\n登录可见\n仅自己可见&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\u516C\u5F00\\n\u767B\u5F55\u53EF\u89C1\\n\u4EC5\u81EA\u5DF1\u53EF\u89C1&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        }</span></span>
 <span class="line"><span style="color:#c9d1d9;">      }</span></span>
 <span class="line"><span style="color:#c9d1d9;">    },</span></span>
@@ -195,7 +177,7 @@
 <span class="line"><span style="color:#c9d1d9;">      &quot;type&quot; : &quot;@flow.javascript&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;script&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\/\/ Get input\nconst text = $actions.inputValue;\n\nconst typeMap = {\n  \&quot;公开\&quot;:\&quot;0\&quot;,\n  \&quot;登录可见\&quot;:\&quot;1\&quot;,\n  \&quot;仅自己可见\&quot;:\&quot;2\&quot;,\n}\n$actions.setVar(\&quot;type\&quot;,typeMap[text])\n\/\/ Resolve with output\n$actions.resolve(typeMap[text]);\n\n\/\/ Exception handling:\n\/\/  $actions.reject(\&quot;Error\&quot;);\n\/\/  $actions.finish();&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\\/\\/ Get input\\nconst text = $actions.inputValue;\\n\\nconst typeMap = {\\n  \\&quot;\u516C\u5F00\\&quot;:\\&quot;0\\&quot;,\\n  \\&quot;\u767B\u5F55\u53EF\u89C1\\&quot;:\\&quot;1\\&quot;,\\n  \\&quot;\u4EC5\u81EA\u5DF1\u53EF\u89C1\\&quot;:\\&quot;2\\&quot;,\\n}\\n$actions.setVar(\\&quot;type\\&quot;,typeMap[text])\\n\\/\\/ Resolve with output\\n$actions.resolve(typeMap[text]);\\n\\n\\/\\/ Exception handling:\\n\\/\\/  $actions.reject(\\&quot;Error\\&quot;);\\n\\/\\/  $actions.finish();&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        }</span></span>
 <span class="line"><span style="color:#c9d1d9;">      }</span></span>
 <span class="line"><span style="color:#c9d1d9;">    },</span></span>
@@ -207,7 +189,7 @@
 <span class="line"><span style="color:#c9d1d9;">        },</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;fullScreen&quot; : false,</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;text&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;标签：$\n可见度：$\n内容：$&quot;,</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\u6807\u7B7E\uFF1A$\\n\u53EF\u89C1\u5EA6\uFF1A$\\n\u5185\u5BB9\uFF1A$&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">          &quot;tokens&quot; : [</span></span>
 <span class="line"><span style="color:#c9d1d9;">            {</span></span>
 <span class="line"><span style="color:#c9d1d9;">              &quot;location&quot; : 14,</span></span>
@@ -229,7 +211,7 @@
 <span class="line"><span style="color:#c9d1d9;">      &quot;type&quot; : &quot;@ui.confirm&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;text&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;是否确认&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;\u662F\u5426\u786E\u8BA4&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        }</span></span>
 <span class="line"><span style="color:#c9d1d9;">      }</span></span>
 <span class="line"><span style="color:#c9d1d9;">    },</span></span>
@@ -237,7 +219,7 @@
 <span class="line"><span style="color:#c9d1d9;">      &quot;type&quot; : &quot;@flow.javascript&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;script&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;const api = $actions.getVar(\&quot;api\&quot;)\nconst tag = $actions.getVar(\&quot;tag\&quot;)\nconst content = $actions.getVar(\&quot;content\&quot;)\nconst type = $actions.getVar(\&quot;type\&quot;)\nconst token = $actions.getVar(\&quot;token\&quot;)\nconst obj = {\n    type:type,\n    tag:tag,\n    content:content,\n    token:token\n  }\n  $actions.resolve(JSON.stringify(obj))&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;const api = $actions.getVar(\\&quot;api\\&quot;)\\nconst tag = $actions.getVar(\\&quot;tag\\&quot;)\\nconst content = $actions.getVar(\\&quot;content\\&quot;)\\nconst type = $actions.getVar(\\&quot;type\\&quot;)\\nconst token = $actions.getVar(\\&quot;token\\&quot;)\\nconst obj = {\\n    type:type,\\n    tag:tag,\\n    content:content,\\n    token:token\\n  }\\n  $actions.resolve(JSON.stringify(obj))&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        }</span></span>
 <span class="line"><span style="color:#c9d1d9;">      }</span></span>
 <span class="line"><span style="color:#c9d1d9;">    },</span></span>
@@ -254,7 +236,7 @@
 <span class="line"><span style="color:#c9d1d9;">          ]</span></span>
 <span class="line"><span style="color:#c9d1d9;">        },</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;url&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;$\/ispeak\/addByToken&quot;,</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;$\\/ispeak\\/addByToken&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">          &quot;tokens&quot; : [</span></span>
 <span class="line"><span style="color:#c9d1d9;">            {</span></span>
 <span class="line"><span style="color:#c9d1d9;">              &quot;location&quot; : 0,</span></span>
@@ -264,13 +246,13 @@
 <span class="line"><span style="color:#c9d1d9;">        },</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;method&quot; : 1,</span></span>
 <span class="line"><span style="color:#c9d1d9;">        &quot;headers&quot; : {</span></span>
-<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;{\n  \&quot;Content-Type\&quot;: \&quot;application\/json\&quot;\n}&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9;">          &quot;value&quot; : &quot;{\\n  \\&quot;Content-Type\\&quot;: \\&quot;application\\/json\\&quot;\\n}&quot;</span></span>
 <span class="line"><span style="color:#c9d1d9;">        }</span></span>
 <span class="line"><span style="color:#c9d1d9;">      }</span></span>
 <span class="line"><span style="color:#c9d1d9;">    }</span></span>
 <span class="line"><span style="color:#c9d1d9;">  ],</span></span>
 <span class="line"><span style="color:#c9d1d9;">  &quot;buildVersion&quot; : 1,</span></span>
-<span class="line"><span style="color:#c9d1d9;">  &quot;name&quot; : &quot;将文本发送到speak&quot;,</span></span>
+<span class="line"><span style="color:#c9d1d9;">  &quot;name&quot; : &quot;\u5C06\u6587\u672C\u53D1\u9001\u5230speak&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">  &quot;clientMinVersion&quot; : 1,</span></span>
 <span class="line"><span style="color:#c9d1d9;">  &quot;summary&quot; : &quot;&quot;,</span></span>
 <span class="line"><span style="color:#c9d1d9;">  &quot;icon&quot; : {</span></span>
@@ -285,7 +267,7 @@
 <span class="line"><span style="color:#24292f;">      &quot;type&quot; : &quot;@flow.set-variable&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;value&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;你的token&quot;</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\u4F60\u7684token&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        },</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;name&quot; : {</span></span>
 <span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;token&quot;</span></span>
@@ -329,7 +311,7 @@
 <span class="line"><span style="color:#24292f;">      &quot;type&quot; : &quot;@flow.set-variable&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;value&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;你的api地址&quot;</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\u4F60\u7684api\u5730\u5740&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        },</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;name&quot; : {</span></span>
 <span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;api&quot;</span></span>
@@ -340,7 +322,7 @@
 <span class="line"><span style="color:#24292f;">      &quot;type&quot; : &quot;@flow.set-variable&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;value&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;你的用户id&quot;</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\u4F60\u7684\u7528\u6237id&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        },</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;name&quot; : {</span></span>
 <span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;userId&quot;</span></span>
@@ -354,7 +336,7 @@
 <span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        },</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;url&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;$\/ispeak\/tag\/list?userId=$&quot;,</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;$\\/ispeak\\/tag\\/list?userId=$&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">          &quot;tokens&quot; : [</span></span>
 <span class="line"><span style="color:#24292f;">            {</span></span>
 <span class="line"><span style="color:#24292f;">              &quot;location&quot; : 25,</span></span>
@@ -368,7 +350,7 @@
 <span class="line"><span style="color:#24292f;">        },</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;method&quot; : 0,</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;headers&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;{\n  \&quot;Content-Type\&quot;: \&quot;application\/json\&quot;\n}&quot;</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;{\\n  \\&quot;Content-Type\\&quot;: \\&quot;application\\/json\\&quot;\\n}&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        }</span></span>
 <span class="line"><span style="color:#24292f;">      }</span></span>
 <span class="line"><span style="color:#24292f;">    },</span></span>
@@ -376,7 +358,7 @@
 <span class="line"><span style="color:#24292f;">      &quot;type&quot; : &quot;@flow.javascript&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;script&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\/\/ Get input\nconst text = $actions.inputValue;\n\/\/ Resolve with output\nconst textJson = JSON.parse(text);\nconst selectData = []\nconst selectMap = {}\ntextJson.data.forEach(item=&gt;{\n  selectData.push(item.name)\n  selectMap[item.name] = item._id\n})\n$actions.setVar(\&quot;selectMap\&quot;,selectMap)\n$actions.resolve(selectData.join(\&quot;\\n\&quot;));\n\n\/\/ Exception handling:\n\/\/  $actions.reject(\&quot;Error\&quot;);\n\/\/  $actions.finish();&quot;</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\\/\\/ Get input\\nconst text = $actions.inputValue;\\n\\/\\/ Resolve with output\\nconst textJson = JSON.parse(text);\\nconst selectData = []\\nconst selectMap = {}\\ntextJson.data.forEach(item=&gt;{\\n  selectData.push(item.name)\\n  selectMap[item.name] = item._id\\n})\\n$actions.setVar(\\&quot;selectMap\\&quot;,selectMap)\\n$actions.resolve(selectData.join(\\&quot;\\\\n\\&quot;));\\n\\n\\/\\/ Exception handling:\\n\\/\\/  $actions.reject(\\&quot;Error\\&quot;);\\n\\/\\/  $actions.finish();&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        }</span></span>
 <span class="line"><span style="color:#24292f;">      }</span></span>
 <span class="line"><span style="color:#24292f;">    },</span></span>
@@ -420,7 +402,7 @@
 <span class="line"><span style="color:#24292f;">      &quot;type&quot; : &quot;@flow.javascript&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;script&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\/\/ Get input\nconst text = $actions.inputValue;\nconst selectMap = $actions.getVar(\&quot;selectMap\&quot;)\n$actions.setVar(\&quot;tag\&quot;,selectMap[text])\n\/\/ Resolve with output\n$actions.resolve(selectMap[text]);\n\n\/\/ Exception handling:\n\/\/  $actions.reject(\&quot;Error\&quot;);\n\/\/  $actions.finish();&quot;</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\\/\\/ Get input\\nconst text = $actions.inputValue;\\nconst selectMap = $actions.getVar(\\&quot;selectMap\\&quot;)\\n$actions.setVar(\\&quot;tag\\&quot;,selectMap[text])\\n\\/\\/ Resolve with output\\n$actions.resolve(selectMap[text]);\\n\\n\\/\\/ Exception handling:\\n\\/\\/  $actions.reject(\\&quot;Error\\&quot;);\\n\\/\\/  $actions.finish();&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        }</span></span>
 <span class="line"><span style="color:#24292f;">      }</span></span>
 <span class="line"><span style="color:#24292f;">    },</span></span>
@@ -428,12 +410,12 @@
 <span class="line"><span style="color:#24292f;">      &quot;type&quot; : &quot;@ui.menu&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;prompt&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;选择可见类型&quot;</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\u9009\u62E9\u53EF\u89C1\u7C7B\u578B&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        },</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;selectAllByDefault&quot; : false,</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;multiValue&quot; : false,</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;lines&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;公开\n登录可见\n仅自己可见&quot;</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\u516C\u5F00\\n\u767B\u5F55\u53EF\u89C1\\n\u4EC5\u81EA\u5DF1\u53EF\u89C1&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        }</span></span>
 <span class="line"><span style="color:#24292f;">      }</span></span>
 <span class="line"><span style="color:#24292f;">    },</span></span>
@@ -458,7 +440,7 @@
 <span class="line"><span style="color:#24292f;">      &quot;type&quot; : &quot;@flow.javascript&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;script&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\/\/ Get input\nconst text = $actions.inputValue;\n\nconst typeMap = {\n  \&quot;公开\&quot;:\&quot;0\&quot;,\n  \&quot;登录可见\&quot;:\&quot;1\&quot;,\n  \&quot;仅自己可见\&quot;:\&quot;2\&quot;,\n}\n$actions.setVar(\&quot;type\&quot;,typeMap[text])\n\/\/ Resolve with output\n$actions.resolve(typeMap[text]);\n\n\/\/ Exception handling:\n\/\/  $actions.reject(\&quot;Error\&quot;);\n\/\/  $actions.finish();&quot;</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\\/\\/ Get input\\nconst text = $actions.inputValue;\\n\\nconst typeMap = {\\n  \\&quot;\u516C\u5F00\\&quot;:\\&quot;0\\&quot;,\\n  \\&quot;\u767B\u5F55\u53EF\u89C1\\&quot;:\\&quot;1\\&quot;,\\n  \\&quot;\u4EC5\u81EA\u5DF1\u53EF\u89C1\\&quot;:\\&quot;2\\&quot;,\\n}\\n$actions.setVar(\\&quot;type\\&quot;,typeMap[text])\\n\\/\\/ Resolve with output\\n$actions.resolve(typeMap[text]);\\n\\n\\/\\/ Exception handling:\\n\\/\\/  $actions.reject(\\&quot;Error\\&quot;);\\n\\/\\/  $actions.finish();&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        }</span></span>
 <span class="line"><span style="color:#24292f;">      }</span></span>
 <span class="line"><span style="color:#24292f;">    },</span></span>
@@ -470,7 +452,7 @@
 <span class="line"><span style="color:#24292f;">        },</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;fullScreen&quot; : false,</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;text&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;标签：$\n可见度：$\n内容：$&quot;,</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\u6807\u7B7E\uFF1A$\\n\u53EF\u89C1\u5EA6\uFF1A$\\n\u5185\u5BB9\uFF1A$&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">          &quot;tokens&quot; : [</span></span>
 <span class="line"><span style="color:#24292f;">            {</span></span>
 <span class="line"><span style="color:#24292f;">              &quot;location&quot; : 14,</span></span>
@@ -492,7 +474,7 @@
 <span class="line"><span style="color:#24292f;">      &quot;type&quot; : &quot;@ui.confirm&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;text&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;是否确认&quot;</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;\u662F\u5426\u786E\u8BA4&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        }</span></span>
 <span class="line"><span style="color:#24292f;">      }</span></span>
 <span class="line"><span style="color:#24292f;">    },</span></span>
@@ -500,7 +482,7 @@
 <span class="line"><span style="color:#24292f;">      &quot;type&quot; : &quot;@flow.javascript&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">      &quot;parameters&quot; : {</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;script&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;const api = $actions.getVar(\&quot;api\&quot;)\nconst tag = $actions.getVar(\&quot;tag\&quot;)\nconst content = $actions.getVar(\&quot;content\&quot;)\nconst type = $actions.getVar(\&quot;type\&quot;)\nconst token = $actions.getVar(\&quot;token\&quot;)\nconst obj = {\n    type:type,\n    tag:tag,\n    content:content,\n    token:token\n  }\n  $actions.resolve(JSON.stringify(obj))&quot;</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;const api = $actions.getVar(\\&quot;api\\&quot;)\\nconst tag = $actions.getVar(\\&quot;tag\\&quot;)\\nconst content = $actions.getVar(\\&quot;content\\&quot;)\\nconst type = $actions.getVar(\\&quot;type\\&quot;)\\nconst token = $actions.getVar(\\&quot;token\\&quot;)\\nconst obj = {\\n    type:type,\\n    tag:tag,\\n    content:content,\\n    token:token\\n  }\\n  $actions.resolve(JSON.stringify(obj))&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        }</span></span>
 <span class="line"><span style="color:#24292f;">      }</span></span>
 <span class="line"><span style="color:#24292f;">    },</span></span>
@@ -517,7 +499,7 @@
 <span class="line"><span style="color:#24292f;">          ]</span></span>
 <span class="line"><span style="color:#24292f;">        },</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;url&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;$\/ispeak\/addByToken&quot;,</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;$\\/ispeak\\/addByToken&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">          &quot;tokens&quot; : [</span></span>
 <span class="line"><span style="color:#24292f;">            {</span></span>
 <span class="line"><span style="color:#24292f;">              &quot;location&quot; : 0,</span></span>
@@ -527,13 +509,13 @@
 <span class="line"><span style="color:#24292f;">        },</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;method&quot; : 1,</span></span>
 <span class="line"><span style="color:#24292f;">        &quot;headers&quot; : {</span></span>
-<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;{\n  \&quot;Content-Type\&quot;: \&quot;application\/json\&quot;\n}&quot;</span></span>
+<span class="line"><span style="color:#24292f;">          &quot;value&quot; : &quot;{\\n  \\&quot;Content-Type\\&quot;: \\&quot;application\\/json\\&quot;\\n}&quot;</span></span>
 <span class="line"><span style="color:#24292f;">        }</span></span>
 <span class="line"><span style="color:#24292f;">      }</span></span>
 <span class="line"><span style="color:#24292f;">    }</span></span>
 <span class="line"><span style="color:#24292f;">  ],</span></span>
 <span class="line"><span style="color:#24292f;">  &quot;buildVersion&quot; : 1,</span></span>
-<span class="line"><span style="color:#24292f;">  &quot;name&quot; : &quot;将文本发送到speak&quot;,</span></span>
+<span class="line"><span style="color:#24292f;">  &quot;name&quot; : &quot;\u5C06\u6587\u672C\u53D1\u9001\u5230speak&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">  &quot;clientMinVersion&quot; : 1,</span></span>
 <span class="line"><span style="color:#24292f;">  &quot;summary&quot; : &quot;&quot;,</span></span>
 <span class="line"><span style="color:#24292f;">  &quot;icon&quot; : {</span></span>
@@ -542,25 +524,25 @@
 <span class="line"><span style="color:#24292f;">  },</span></span>
 <span class="line"><span style="color:#24292f;">  &quot;clientVersion&quot; : 722</span></span>
 <span class="line"><span style="color:#24292f;">}</span></span>
-<span class="line"><span style="color:#24292f;"></span></span></code></pre></div><h2 id="utools-发送" tabindex="-1">Utools 发送 <a class="header-anchor" href="#utools-发送" aria-hidden="true">#</a></h2><p>utools发送依赖于插件快捷命令</p><p><img src="https://file.acs.pw/picGo/2022/02/27/20220227140556.png" alt="image-20220227140556245"></p><p>参考代码</p><div class="language-javascript"><button class="copy"></button><span class="lang">javascript</span><pre class="vp-code-dark"><code><span class="line"><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">axios</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#D2A8FF;">require</span><span style="color:#C9D1D9;">(</span><span style="color:#A5D6FF;">&#39;axios&#39;</span><span style="color:#C9D1D9;">)</span></span>
-<span class="line"><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">api</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#A5D6FF;">&#39;你的api地址&#39;</span></span>
-<span class="line"><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">token</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#A5D6FF;">&#39;你的token&#39;</span></span>
-<span class="line"><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">userId</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#A5D6FF;">&#39;你的用户id&#39;</span></span>
+<span class="line"><span style="color:#24292f;"></span></span></code></pre></div><h2 id="utools-\u53D1\u9001" tabindex="-1">Utools \u53D1\u9001 <a class="header-anchor" href="#utools-\u53D1\u9001" aria-hidden="true">#</a></h2><p>utools\u53D1\u9001\u4F9D\u8D56\u4E8E\u63D2\u4EF6\u5FEB\u6377\u547D\u4EE4</p><p><img src="https://file.acs.pw/picGo/2022/02/27/20220227140556.png" alt="image-20220227140556245"></p><p>\u53C2\u8003\u4EE3\u7801</p><div class="language-javascript"><button class="copy"></button><span class="lang">javascript</span><pre class="vp-code-dark"><code><span class="line"><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">axios</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#D2A8FF;">require</span><span style="color:#C9D1D9;">(</span><span style="color:#A5D6FF;">&#39;axios&#39;</span><span style="color:#C9D1D9;">)</span></span>
+<span class="line"><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">api</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#A5D6FF;">&#39;\u4F60\u7684api\u5730\u5740&#39;</span></span>
+<span class="line"><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">token</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#A5D6FF;">&#39;\u4F60\u7684token&#39;</span></span>
+<span class="line"><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">userId</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#A5D6FF;">&#39;\u4F60\u7684\u7528\u6237id&#39;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">params</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> {</span></span>
 <span class="line"><span style="color:#C9D1D9;">  token,</span></span>
 <span class="line"><span style="color:#C9D1D9;">  userId,</span></span>
-<span class="line"><span style="color:#C9D1D9;">  content: </span><span style="color:#A5D6FF;">`{{subinput}}`</span></span>
+<span class="line"><span style="color:#C9D1D9;">  content: </span><span style="color:#A5D6FF;">\`{{subinput}}\`</span></span>
 <span class="line"><span style="color:#C9D1D9;">}</span></span>
 <span class="line"><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">tagList</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> []</span></span>
 <span class="line"><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">typeList</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> [</span></span>
-<span class="line"><span style="color:#C9D1D9;">  { title: </span><span style="color:#A5D6FF;">&#39;公开显示&#39;</span><span style="color:#C9D1D9;">, description: </span><span style="color:#A5D6FF;">&#39;0&#39;</span><span style="color:#C9D1D9;"> },</span></span>
-<span class="line"><span style="color:#C9D1D9;">  { title: </span><span style="color:#A5D6FF;">&#39;登录显示&#39;</span><span style="color:#C9D1D9;">, description: </span><span style="color:#A5D6FF;">&#39;1&#39;</span><span style="color:#C9D1D9;"> },</span></span>
-<span class="line"><span style="color:#C9D1D9;">  { title: </span><span style="color:#A5D6FF;">&#39;仅自己显示&#39;</span><span style="color:#C9D1D9;">, description: </span><span style="color:#A5D6FF;">&#39;2&#39;</span><span style="color:#C9D1D9;"> }</span></span>
+<span class="line"><span style="color:#C9D1D9;">  { title: </span><span style="color:#A5D6FF;">&#39;\u516C\u5F00\u663E\u793A&#39;</span><span style="color:#C9D1D9;">, description: </span><span style="color:#A5D6FF;">&#39;0&#39;</span><span style="color:#C9D1D9;"> },</span></span>
+<span class="line"><span style="color:#C9D1D9;">  { title: </span><span style="color:#A5D6FF;">&#39;\u767B\u5F55\u663E\u793A&#39;</span><span style="color:#C9D1D9;">, description: </span><span style="color:#A5D6FF;">&#39;1&#39;</span><span style="color:#C9D1D9;"> },</span></span>
+<span class="line"><span style="color:#C9D1D9;">  { title: </span><span style="color:#A5D6FF;">&#39;\u4EC5\u81EA\u5DF1\u663E\u793A&#39;</span><span style="color:#C9D1D9;">, description: </span><span style="color:#A5D6FF;">&#39;2&#39;</span><span style="color:#C9D1D9;"> }</span></span>
 <span class="line"><span style="color:#C9D1D9;">]</span></span>
 <span class="line"><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">showCommentList</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> [</span></span>
-<span class="line"><span style="color:#C9D1D9;">  { title: </span><span style="color:#A5D6FF;">&#39;允许评论&#39;</span><span style="color:#C9D1D9;">, description: </span><span style="color:#A5D6FF;">&#39;1&#39;</span><span style="color:#C9D1D9;"> },</span></span>
-<span class="line"><span style="color:#C9D1D9;">  { title: </span><span style="color:#A5D6FF;">&#39;不允许评论&#39;</span><span style="color:#C9D1D9;">, description: </span><span style="color:#A5D6FF;">&#39;0&#39;</span><span style="color:#C9D1D9;"> }</span></span>
+<span class="line"><span style="color:#C9D1D9;">  { title: </span><span style="color:#A5D6FF;">&#39;\u5141\u8BB8\u8BC4\u8BBA&#39;</span><span style="color:#C9D1D9;">, description: </span><span style="color:#A5D6FF;">&#39;1&#39;</span><span style="color:#C9D1D9;"> },</span></span>
+<span class="line"><span style="color:#C9D1D9;">  { title: </span><span style="color:#A5D6FF;">&#39;\u4E0D\u5141\u8BB8\u8BC4\u8BBA&#39;</span><span style="color:#C9D1D9;">, description: </span><span style="color:#A5D6FF;">&#39;0&#39;</span><span style="color:#C9D1D9;"> }</span></span>
 <span class="line"><span style="color:#C9D1D9;">]</span></span>
 <span class="line"><span style="color:#FF7B72;">async</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">function</span><span style="color:#C9D1D9;"> </span><span style="color:#D2A8FF;">main</span><span style="color:#C9D1D9;">() {</span></span>
 <span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">list</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">await</span><span style="color:#C9D1D9;"> </span><span style="color:#D2A8FF;">getTagList</span><span style="color:#C9D1D9;">()</span></span>
@@ -572,14 +554,14 @@
 <span class="line"><span style="color:#C9D1D9;">      })</span></span>
 <span class="line"><span style="color:#C9D1D9;">    })</span></span>
 <span class="line"><span style="color:#C9D1D9;">  } </span><span style="color:#FF7B72;">else</span><span style="color:#C9D1D9;"> {</span></span>
-<span class="line"><span style="color:#C9D1D9;">    quickcommand.</span><span style="color:#D2A8FF;">showMessageBox</span><span style="color:#C9D1D9;">(</span><span style="color:#A5D6FF;">&#39;获取标签失败&#39;</span><span style="color:#C9D1D9;">, </span><span style="color:#A5D6FF;">&#39;fail&#39;</span><span style="color:#C9D1D9;">)</span></span>
+<span class="line"><span style="color:#C9D1D9;">    quickcommand.</span><span style="color:#D2A8FF;">showMessageBox</span><span style="color:#C9D1D9;">(</span><span style="color:#A5D6FF;">&#39;\u83B7\u53D6\u6807\u7B7E\u5931\u8D25&#39;</span><span style="color:#C9D1D9;">, </span><span style="color:#A5D6FF;">&#39;fail&#39;</span><span style="color:#C9D1D9;">)</span></span>
 <span class="line"><span style="color:#C9D1D9;">  }</span></span>
 <span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">tag</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">await</span><span style="color:#C9D1D9;"> </span><span style="color:#D2A8FF;">userSelect</span><span style="color:#C9D1D9;">(tagList)</span></span>
 <span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">type</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">await</span><span style="color:#C9D1D9;"> </span><span style="color:#D2A8FF;">userSelect</span><span style="color:#C9D1D9;">(typeList)</span></span>
 <span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">showComment</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">await</span><span style="color:#C9D1D9;"> </span><span style="color:#D2A8FF;">userSelect</span><span style="color:#C9D1D9;">(showCommentList)</span></span>
 <span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FF7B72;">const</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">sendResult</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">=</span><span style="color:#C9D1D9;"> </span><span style="color:#FF7B72;">await</span><span style="color:#C9D1D9;"> </span><span style="color:#D2A8FF;">sendBiuBiu</span><span style="color:#C9D1D9;">({ tag, type, </span><span style="color:#FF7B72;">...</span><span style="color:#C9D1D9;">params })</span></span>
 <span class="line"><span style="color:#C9D1D9;">  </span><span style="color:#FF7B72;">if</span><span style="color:#C9D1D9;"> (sendResult.code </span><span style="color:#FF7B72;">===</span><span style="color:#C9D1D9;"> </span><span style="color:#79C0FF;">0</span><span style="color:#C9D1D9;">) {</span></span>
-<span class="line"><span style="color:#C9D1D9;">    quickcommand.</span><span style="color:#D2A8FF;">showMessageBox</span><span style="color:#C9D1D9;">(</span><span style="color:#A5D6FF;">&#39;发送成功&#39;</span><span style="color:#C9D1D9;">)</span></span>
+<span class="line"><span style="color:#C9D1D9;">    quickcommand.</span><span style="color:#D2A8FF;">showMessageBox</span><span style="color:#C9D1D9;">(</span><span style="color:#A5D6FF;">&#39;\u53D1\u9001\u6210\u529F&#39;</span><span style="color:#C9D1D9;">)</span></span>
 <span class="line"><span style="color:#C9D1D9;">  } </span><span style="color:#FF7B72;">else</span><span style="color:#C9D1D9;"> {</span></span>
 <span class="line"><span style="color:#C9D1D9;">    console.</span><span style="color:#D2A8FF;">log</span><span style="color:#C9D1D9;">(sendResult)</span></span>
 <span class="line"><span style="color:#C9D1D9;">    quickcommand.</span><span style="color:#D2A8FF;">showMessageBox</span><span style="color:#C9D1D9;">(sendResult.message, </span><span style="color:#A5D6FF;">&#39;fail&#39;</span><span style="color:#C9D1D9;">)</span></span>
@@ -622,24 +604,24 @@
 <span class="line"><span style="color:#D2A8FF;">main</span><span style="color:#C9D1D9;">()</span></span>
 <span class="line"></span>
 <span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">axios</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> </span><span style="color:#8250DF;">require</span><span style="color:#24292F;">(</span><span style="color:#0A3069;">&#39;axios&#39;</span><span style="color:#24292F;">)</span></span>
-<span class="line"><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">api</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> </span><span style="color:#0A3069;">&#39;你的api地址&#39;</span></span>
-<span class="line"><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">token</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> </span><span style="color:#0A3069;">&#39;你的token&#39;</span></span>
-<span class="line"><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">userId</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> </span><span style="color:#0A3069;">&#39;你的用户id&#39;</span></span>
+<span class="line"><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">api</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> </span><span style="color:#0A3069;">&#39;\u4F60\u7684api\u5730\u5740&#39;</span></span>
+<span class="line"><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">token</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> </span><span style="color:#0A3069;">&#39;\u4F60\u7684token&#39;</span></span>
+<span class="line"><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">userId</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> </span><span style="color:#0A3069;">&#39;\u4F60\u7684\u7528\u6237id&#39;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">params</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> {</span></span>
 <span class="line"><span style="color:#24292F;">  token,</span></span>
 <span class="line"><span style="color:#24292F;">  userId,</span></span>
-<span class="line"><span style="color:#24292F;">  content: </span><span style="color:#0A3069;">`{{subinput}}`</span></span>
+<span class="line"><span style="color:#24292F;">  content: </span><span style="color:#0A3069;">\`{{subinput}}\`</span></span>
 <span class="line"><span style="color:#24292F;">}</span></span>
 <span class="line"><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">tagList</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> []</span></span>
 <span class="line"><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">typeList</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> [</span></span>
-<span class="line"><span style="color:#24292F;">  { title: </span><span style="color:#0A3069;">&#39;公开显示&#39;</span><span style="color:#24292F;">, description: </span><span style="color:#0A3069;">&#39;0&#39;</span><span style="color:#24292F;"> },</span></span>
-<span class="line"><span style="color:#24292F;">  { title: </span><span style="color:#0A3069;">&#39;登录显示&#39;</span><span style="color:#24292F;">, description: </span><span style="color:#0A3069;">&#39;1&#39;</span><span style="color:#24292F;"> },</span></span>
-<span class="line"><span style="color:#24292F;">  { title: </span><span style="color:#0A3069;">&#39;仅自己显示&#39;</span><span style="color:#24292F;">, description: </span><span style="color:#0A3069;">&#39;2&#39;</span><span style="color:#24292F;"> }</span></span>
+<span class="line"><span style="color:#24292F;">  { title: </span><span style="color:#0A3069;">&#39;\u516C\u5F00\u663E\u793A&#39;</span><span style="color:#24292F;">, description: </span><span style="color:#0A3069;">&#39;0&#39;</span><span style="color:#24292F;"> },</span></span>
+<span class="line"><span style="color:#24292F;">  { title: </span><span style="color:#0A3069;">&#39;\u767B\u5F55\u663E\u793A&#39;</span><span style="color:#24292F;">, description: </span><span style="color:#0A3069;">&#39;1&#39;</span><span style="color:#24292F;"> },</span></span>
+<span class="line"><span style="color:#24292F;">  { title: </span><span style="color:#0A3069;">&#39;\u4EC5\u81EA\u5DF1\u663E\u793A&#39;</span><span style="color:#24292F;">, description: </span><span style="color:#0A3069;">&#39;2&#39;</span><span style="color:#24292F;"> }</span></span>
 <span class="line"><span style="color:#24292F;">]</span></span>
 <span class="line"><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">showCommentList</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> [</span></span>
-<span class="line"><span style="color:#24292F;">  { title: </span><span style="color:#0A3069;">&#39;允许评论&#39;</span><span style="color:#24292F;">, description: </span><span style="color:#0A3069;">&#39;1&#39;</span><span style="color:#24292F;"> },</span></span>
-<span class="line"><span style="color:#24292F;">  { title: </span><span style="color:#0A3069;">&#39;不允许评论&#39;</span><span style="color:#24292F;">, description: </span><span style="color:#0A3069;">&#39;0&#39;</span><span style="color:#24292F;"> }</span></span>
+<span class="line"><span style="color:#24292F;">  { title: </span><span style="color:#0A3069;">&#39;\u5141\u8BB8\u8BC4\u8BBA&#39;</span><span style="color:#24292F;">, description: </span><span style="color:#0A3069;">&#39;1&#39;</span><span style="color:#24292F;"> },</span></span>
+<span class="line"><span style="color:#24292F;">  { title: </span><span style="color:#0A3069;">&#39;\u4E0D\u5141\u8BB8\u8BC4\u8BBA&#39;</span><span style="color:#24292F;">, description: </span><span style="color:#0A3069;">&#39;0&#39;</span><span style="color:#24292F;"> }</span></span>
 <span class="line"><span style="color:#24292F;">]</span></span>
 <span class="line"><span style="color:#CF222E;">async</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">function</span><span style="color:#24292F;"> </span><span style="color:#8250DF;">main</span><span style="color:#24292F;">() {</span></span>
 <span class="line"><span style="color:#24292F;">  </span><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">list</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">await</span><span style="color:#24292F;"> </span><span style="color:#8250DF;">getTagList</span><span style="color:#24292F;">()</span></span>
@@ -651,14 +633,14 @@
 <span class="line"><span style="color:#24292F;">      })</span></span>
 <span class="line"><span style="color:#24292F;">    })</span></span>
 <span class="line"><span style="color:#24292F;">  } </span><span style="color:#CF222E;">else</span><span style="color:#24292F;"> {</span></span>
-<span class="line"><span style="color:#24292F;">    quickcommand.</span><span style="color:#8250DF;">showMessageBox</span><span style="color:#24292F;">(</span><span style="color:#0A3069;">&#39;获取标签失败&#39;</span><span style="color:#24292F;">, </span><span style="color:#0A3069;">&#39;fail&#39;</span><span style="color:#24292F;">)</span></span>
+<span class="line"><span style="color:#24292F;">    quickcommand.</span><span style="color:#8250DF;">showMessageBox</span><span style="color:#24292F;">(</span><span style="color:#0A3069;">&#39;\u83B7\u53D6\u6807\u7B7E\u5931\u8D25&#39;</span><span style="color:#24292F;">, </span><span style="color:#0A3069;">&#39;fail&#39;</span><span style="color:#24292F;">)</span></span>
 <span class="line"><span style="color:#24292F;">  }</span></span>
 <span class="line"><span style="color:#24292F;">  </span><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">tag</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">await</span><span style="color:#24292F;"> </span><span style="color:#8250DF;">userSelect</span><span style="color:#24292F;">(tagList)</span></span>
 <span class="line"><span style="color:#24292F;">  </span><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">type</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">await</span><span style="color:#24292F;"> </span><span style="color:#8250DF;">userSelect</span><span style="color:#24292F;">(typeList)</span></span>
 <span class="line"><span style="color:#24292F;">  </span><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">showComment</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">await</span><span style="color:#24292F;"> </span><span style="color:#8250DF;">userSelect</span><span style="color:#24292F;">(showCommentList)</span></span>
 <span class="line"><span style="color:#24292F;">  </span><span style="color:#CF222E;">const</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">sendResult</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">=</span><span style="color:#24292F;"> </span><span style="color:#CF222E;">await</span><span style="color:#24292F;"> </span><span style="color:#8250DF;">sendBiuBiu</span><span style="color:#24292F;">({ tag, type, </span><span style="color:#CF222E;">...</span><span style="color:#24292F;">params })</span></span>
 <span class="line"><span style="color:#24292F;">  </span><span style="color:#CF222E;">if</span><span style="color:#24292F;"> (sendResult.code </span><span style="color:#CF222E;">===</span><span style="color:#24292F;"> </span><span style="color:#0550AE;">0</span><span style="color:#24292F;">) {</span></span>
-<span class="line"><span style="color:#24292F;">    quickcommand.</span><span style="color:#8250DF;">showMessageBox</span><span style="color:#24292F;">(</span><span style="color:#0A3069;">&#39;发送成功&#39;</span><span style="color:#24292F;">)</span></span>
+<span class="line"><span style="color:#24292F;">    quickcommand.</span><span style="color:#8250DF;">showMessageBox</span><span style="color:#24292F;">(</span><span style="color:#0A3069;">&#39;\u53D1\u9001\u6210\u529F&#39;</span><span style="color:#24292F;">)</span></span>
 <span class="line"><span style="color:#24292F;">  } </span><span style="color:#CF222E;">else</span><span style="color:#24292F;"> {</span></span>
 <span class="line"><span style="color:#24292F;">    console.</span><span style="color:#8250DF;">log</span><span style="color:#24292F;">(sendResult)</span></span>
 <span class="line"><span style="color:#24292F;">    quickcommand.</span><span style="color:#8250DF;">showMessageBox</span><span style="color:#24292F;">(sendResult.message, </span><span style="color:#0A3069;">&#39;fail&#39;</span><span style="color:#24292F;">)</span></span>
@@ -700,9 +682,4 @@
 <span class="line"><span style="color:#6E7781;">// quickcommand.showMessageBox(&#39;success&#39;)</span></span>
 <span class="line"><span style="color:#8250DF;">main</span><span style="color:#24292F;">()</span></span>
 <span class="line"></span>
-<span class="line"></span></code></pre></div></div></div></main><!--[--><!--]--><footer class="VPDocFooter" data-v-4cd5e8da data-v-f2fccb91><div class="edit-info" data-v-f2fccb91><!----><div class="last-updated" data-v-f2fccb91><p class="VPLastUpdated" data-v-f2fccb91 data-v-b03e0c90>Last updated: <time datatime="2022-08-27T15:23:21.000Z" data-v-b03e0c90></time></p></div></div><div class="prev-next" data-v-f2fccb91><div class="pager" data-v-f2fccb91><a class="pager-link prev" href="/posts/ispeak/comment.html" data-v-f2fccb91><span class="desc" data-v-f2fccb91>Previous page</span><span class="title" data-v-f2fccb91>设置评论</span></a></div><div class="has-prev pager" data-v-f2fccb91><a class="pager-link next" href="/posts/ispeak/init-params.html" data-v-f2fccb91><span class="desc" data-v-f2fccb91>Next page</span><span class="title" data-v-f2fccb91>初始化参数</span></a></div></div></footer><!--[--><!--]--></div></div></div></div></div><!----><!--[--><!--]--></div></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"case_index.md\":\"7187d763\",\"guide_admin_setup.md\":\"5cf83ad0\",\"guide_index.md\":\"89a9b410\",\"guide_setup_db.md\":\"da856d27\",\"guide_setup_deploy.md\":\"dc9be9e2\",\"guide_setup_github.md\":\"c812e5e0\",\"index.md\":\"5d785236\",\"posts_ispeak_comment.md\":\"a3a2eaf9\",\"posts_ispeak_front.md\":\"39f2d5d0\",\"posts_ispeak_index.md\":\"5e25a9c7\",\"posts_ispeak_init-params.md\":\"84dab7aa\",\"posts_ispeak_send-mode.md\":\"126957b1\",\"reference_index.md\":\"d18b6230\",\"reference_kkadmin_environment.md\":\"a49b3514\",\"reference_kkapi_environment.md\":\"19fdab66\"}")</script>
-    <script type="module" async src="/assets/app.1f7f19a8.js"></script>
-    
-  </body>
-</html>
+<span class="line"></span></code></pre></div>`,18),t=[o];function e(c,r,y,u,i,q){return a(),n("div",null,t)}const D=s(p,[["render",e]]);export{F as __pageData,D as default};
