@@ -81,7 +81,7 @@
           const contentSub = content.substring(0, 30)
           new Artalk({
             el: '.ispeak-comment', // 默认情况下 ipseak 生成class为 ispeak-comment 的div
-            pageKey: '/speak/info.html/#/' + _id, // 手动传入当前speak的唯一id
+            pageKey: '/speak/info.html?q=' + _id, // 手动传入当前speak的唯一id
             pageTitle: title || contentSub, // 手动传入当前speak的标题(由于content可能过长，因此截取前30个字符)
             server: 'https://api.antmoe.com/artalk/',
             site: 'speak' // 你的站点名
@@ -102,7 +102,7 @@ ispeak 配置项 scheam 参考：https://github.com/kkfive/ISpeak/blob/master/sr
 
 ::: warning
 
-关于评论一直没有找到合适的通用解决方案，因此关于评论配置名称后期可能会做出调整。因此为了不影响使用，请指定版本号引入相关静态资源
+用户请自行判断所使用的ISpeak的版本。
 
 :::
 
